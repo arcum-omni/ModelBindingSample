@@ -1,25 +1,33 @@
 ﻿
 @{
-    ViewData["Title"] = "HTML Forms Example";
+	ViewData["Title"] = "HTML Forms Example";
 }
 
 <h1>HTML Forms Example</h1>
 
-<form method="post">
-	<label for="full-name">Full Name:</label>
-	<input type="text" id="full-name" name="full-name" />
-	<span>*</span>
-	<br />
+@if (ViewData["Message"] != null)
+{
+	<h3 class="alert alert-success">@ViewData["Message"]</h3>
+}
+else 
+{ 
+	<form method="post">
+		<label for="full-name">Full Name:</label>
+		<input type="text" id="full-name" name="full-name" />
+		<span>*</span>
+		<br />
 
-	<label for="dob">Date of Birth:</label>
-	<input type="date" id="dob" name="dob" />
-	<span>*</span>
-	<br />
+		<label for="dob">Date of Birth:</label>
+		<input type="date" id="dob" name="dob" />
+		<span>*</span>
+		<br />
 
-	<label for="fav-num">Favorite Number:</label>
-	<input type="text" id="fav-num" name="fav-num" />
-	<span>*</span>
-	<br />
+		<label for="fav-num">Favorite Number:</label>
+		<input type="text" id="fav-num" name="fav-num" />
+		<span>*</span>
+		<br />
 
-	<input type="submit" value="Add Student" class="btn btn-primary"/>
-</form>
+		<input type="submit" value="Add Student" class="btn btn-primary"/>
+	</form>
+}
+
