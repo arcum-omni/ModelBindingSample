@@ -25,7 +25,7 @@ namespace ModelBindingSample.Controllers
         {
             // Validate all form data
 
-            // Map data to C# object
+            // Map data to C# Student object
             Student s = new Student();
             s.FullName = data["full-name"];
             s.DateOfBirth = Convert.ToDateTime(data["dob"]);
